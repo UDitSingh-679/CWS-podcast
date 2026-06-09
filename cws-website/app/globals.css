@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --studio: #0D0D0D;
+  --deep: #080808;
+  --surface: #111111;
+  --cream: #F5E2C8;
+  --lime: #D4F87A;
+  --amber: #F5A623;
+  --mouse: #888888;
+  --muted: #666666;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: auto;
+  background: var(--studio);
+}
+
+body {
+  background: var(--studio);
+  color: var(--cream);
+  font-family: var(--font-cormorant), serif;
+  overflow-x: hidden;
+  cursor: none;
+}
+
+@media (max-width: 768px) {
+  body { cursor: auto; }
+}
+
+::selection {
+  background: var(--lime);
+  color: var(--studio);
+}
+
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+@media (hover: none) {
+  body { cursor: auto; }
+  .custom-cursor { display: none; }
+}
